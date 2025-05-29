@@ -19,3 +19,4 @@ tabulate
 matplotlib
 seaborn
 scipy
+python-dotenv

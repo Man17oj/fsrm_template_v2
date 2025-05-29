@@ -5,7 +5,7 @@ from langchain_openai import AzureChatOpenAI
 import yaml
 import os
 import re
-import load_dotenv
+from dotenv import load_dotenv
 import nbformat
 from nbformat.v4 import new_notebook, new_markdown_cell, new_code_cell
 import ast
@@ -77,8 +77,8 @@ class DeveloperAgent:
 
     def generate_cleaning_code(self):
         guidance = self.read_human_guidance()
-        filename =guidance['step_1']['step_name']
-        user_instructions = guidance['step_1']['human_guidance']
+        filename =guidance['step_2']['step_name']
+        user_instructions = guidance['step_2']['human_guidance']
         # regulatory_guidance = self.governance_agent.extract_relevant_guidance("data cleaning")
 
         sample_columns = ", ".join(self.data.columns[:5])

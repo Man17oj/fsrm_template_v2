@@ -1,14 +1,6 @@
 from src.utils.developer_agent import DeveloperAgent
-from dotenv import load_dotenv
-import os
 
-load_dotenv(".env",override=True)
 
-api_base = os.getenv("EYQ_INCUBATOR_ENDPOINT") # incubator endpoint
-api_key = os.getenv("EYQ_INCUBATOR_KEY") # incubator API key
-
-# print("API key ---- >  ", api_key)
-# print("API base ---- >  ", api_base)
 
 
 def main():
